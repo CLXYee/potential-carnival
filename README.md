@@ -97,8 +97,19 @@ npm run dev
 
 ## Deploy to Vercel
 
-```bash
-vercel deploy
-```
+### GitHub integration
 
-Or connect your GitHub repo to Vercel for automatic deployments.
+1. Push the `deployment` branch to GitHub.
+2. Import the repository in the [Vercel dashboard](https://vercel.com/new).
+3. Keep the detected Next.js framework, `npm install` settings, and project root defaults.
+4. Deploy the project.
+
+Vercel will run `npm ci` and `npm run build` using the configuration in [vercel.json](vercel.json). Future pushes to the connected branch will create new deployments.
+
+### Vercel CLI
+
+```bash
+npm install --global vercel
+vercel login
+vercel
+```
