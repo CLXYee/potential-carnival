@@ -1,0 +1,21 @@
+services:
+  web:
+    image: node:22-alpine
+    container_name: potential-carnival
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules      # Anonymous volume to persist node_modules separately
+      - /app/.next              # Persist Next.js build cache
+    command: sh -c "npm install --frozen-lockfile && npm run dev"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=development
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
