@@ -999,10 +999,25 @@
 
 .projects-list {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.projects-group + .projects-group {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(8, 127, 174, 0.2);
+}
+
+.projects-group-title {
+  color: var(--blue);
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
 }
 
 .project-item {
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
   background: linear-gradient(135deg, rgba(100, 200, 255, 0.12), rgba(255, 194, 153, 0.1));
   border: 1px solid rgba(8, 127, 174, 0.16);
@@ -1011,13 +1026,36 @@
   box-shadow: 0 8px 24px rgba(64, 84, 109, 0.05);
 }
 
-.project-item h2 {
+.project-heading {
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(8, 127, 174, 0.2);
+}
+
+.project-item h3 {
   color: var(--blue);
-  margin-top: 0;
+  margin: 0;
+}
+
+.project-period {
+  color: #4a5c7a;
+  font-size: 0.82rem;
+  margin: 0.35rem 0 0;
+}
+
+.project-description {
+  flex: 1;
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(8, 127, 174, 0.2);
 }
 
 .project-tech {
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 0.8rem;
+}
+
+.project-tech strong {
+  color: var(--blue);
 }
 
 .resume-section {
@@ -1121,6 +1159,12 @@
 
   .travel-map {
     height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-list {
+    grid-template-columns: 1fr;
   }
 }
 

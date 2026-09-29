@@ -54,6 +54,68 @@ export default function ResumePage() {
               <h3>Undergraduate Researcher, URECA</h3>
               <p className="resume-meta">Sep 2024 - Jul 2025</p>
               <p>Developed an energy-based out-of-distribution detection pipeline using frozen DINOv2 embeddings from 8-band multispectral imagery, improving few-shot generalization through band-stacking analysis.</p>
+              <h3>Gratitude Corporate Agency Sdn Bhd, Kuala Lumpur</h3>
+              <p className="resume-meta">Business Operations Intern | Feb 2023 - Jul 2023</p>
+              <ul>
+                <li>Coordinated 2-3 roadshows monthly, estimated budgets, liaised with venues, and analysed performance KPIs, contributing to a 25% increase in roadshow profits.</li>
+              </ul>
+            </section>
+            <section className="resume-section">
+              <h2>Hackathons</h2>
+              <h3>Finalist, Asian Hackathon for Green Future 2026 (Top 30 of 439 teams)</h3>
+              <p className="resume-meta">May 2026 - Jul 2026</p>
+              <ul>
+                <li>Developed an AI-assisted PM2.5 monitoring and forecasting platform for Hanoi government use, integrating open weather and human activity data and achieving a forecast error standard deviation of 6.7 µg/m³.</li>
+              </ul>
+              <h3>Finalist, UAiTED Innovation Competition 2025 (Top 6, NextGen Innovator)</h3>
+              <p className="resume-meta">Mar 2025 - Aug 2025</p>
+              <ul>
+                <li>Built a CNN-based medical waste classification system to support disposal sorting, achieving 95% accuracy across six waste categories.</li>
+              </ul>
+              <h3>Finalist, NTU Women in Tech Hackathon 2025</h3>
+              <p className="resume-meta">Feb 2025 - Feb 2025</p>
+              <ul>
+                <li>Developed an AI-powered learning platform integrating GPT-4o mini to help undergraduate students discover suitable courses through chatbot-based recommendations.</li>
+              </ul>
+            </section>
+            <section className="resume-section">
+              <h2>Projects</h2>
+              <h3>Linking Writing Processes to Writing Quality (Kaggle Machine Learning Project)</h3>
+              <p className="resume-meta">Jan 2026 - Apr 2026</p>
+              <ul>
+                <li>Preprocessed anonymised keystroke and mouse interaction logs and trained LightGBM, CatBoost, and ExtraTrees models to predict essay scores.</li>
+                <li>Combined model predictions through ensemble learning, contributing to a team ranking of 134 out of 1,876 teams (top 7.14%) on the Kaggle public leaderboard.</li>
+              </ul>
+              <h3>Deep Learning for Flower Recognition</h3>
+              <p className="resume-meta">Jan 2026 - Apr 2026</p>
+              <ul>
+                <li>Benchmarked ten models spanning CNNs, vision transformers, and a YOLO-based classifier on Oxford Flowers 102 with only 10 training images per class, using a unified training and evaluation pipeline.</li>
+                <li>Compared training from scratch, transfer learning, and MixUp augmentation, achieving a best 97.7% top-1 accuracy with ViT-Base and identifying architecture-dependent effects of MixUp.</li>
+              </ul>
+              <h3>Autonomous Robotic Car Project</h3>
+              <p className="resume-meta">Jan 2026 - Apr 2026</p>
+              <ul>
+                <li>Collaborated with a multidisciplinary team to design and integrate a Raspberry Pi-based system connecting hardware and software components for an autonomous robotic car.</li>
+                <li>Prepared image datasets and trained, evaluated, and deployed a YOLOv5 model for real-time image recognition.</li>
+              </ul>
+              <h3>Hawker Stalk (Hawker Stall Recommendation Platform)</h3>
+              <p className="resume-meta">Aug 2024 - Nov 2024</p>
+              <ul>
+                <li>Built a full-stack hawker stall recommendation platform using HTML, CSS, JavaScript, PHP, and Azure SQL Database for stall discovery and user reviews.</li>
+                <li>Designed database and backend services supporting location-based recommendations, stall registration, and interactive ratings and reviews.</li>
+              </ul>
+              <h3>Text-Based Hospital Management System</h3>
+              <p className="resume-meta">Aug 2024 - Nov 2024</p>
+              <ul>
+                <li>Developed a scalable Java-based system for automating hospital operations, including appointments, billing, and staff management.</li>
+                <li>Focused on modular design and scheduling algorithms to optimize resource allocation and reduce workflow bottlenecks.</li>
+              </ul>
+              <h3>Block-Pushing Puzzle Solver and Search Algorithm Benchmarking</h3>
+              <p className="resume-meta">Jan 2024 - Apr 2024</p>
+              <ul>
+                <li>Implemented and benchmarked seven search algorithms, including BFS, DFS, and A*, in Python to solve a block-pushing puzzle under path constraints.</li>
+                <li>Evaluated performance based on nodes explored and move efficiency, highlighting algorithmic trade-offs.</li>
+              </ul>
             </section>
             <section className="resume-section">
               <h2>Skills</h2>
@@ -66,7 +128,6 @@ export default function ResumePage() {
               <h2>Leadership and Awards</h2>
               <h3>Chairperson, Asia-Pacific Intervarsity Chinese Debate Tournament 2025</h3>
               <p>Managed a 32-member committee to deliver an international tournament with 36 teams from 10 regions, attracting sign-ups from 111 university teams worldwide.</p>
-              <p><strong>Finalist:</strong> Asian Hackathon For Green Future 2026, UAiTED Innovation Competition 2025, NTU Women in Tech Hackathon 2025.</p>
             </section>
           </div>
         </section>

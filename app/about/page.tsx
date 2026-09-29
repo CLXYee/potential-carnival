@@ -58,12 +58,12 @@ const lifeUpdates = [
 ];
 
 const playlist = [
-  { artist: 'Roy Wang', song: '因为遇见你', query: 'Roy Wang 因为遇见你' },
-  { artist: 'Roy Wang', song: '源', query: 'Roy Wang Yuan song' },
-  { artist: 'Karry Wang', song: '树读', query: 'Karry Wang 树读' },
-  { artist: 'Karry Wang', song: '醒着', query: 'Karry Wang 醒着' },
-  { artist: 'Jackson Yee', song: 'Fire', query: 'Jackson Yee Fire song' },
-  { artist: 'Jackson Yee', song: 'My Boo', query: 'Jackson Yee My Boo' },
+  { artist: 'Sundial', song: 'Grass is Greener', query: 'Sundial Grass is Greener' },
+  { artist: 'Roy Wang', song: '牧童', query: 'Roy Wang 牧童' },
+  { artist: '王OK, 洪佩瑜', song: '这条小鱼在乎', query: '这条小鱼在乎' },
+  { artist: 'Accusefive', song: 'Where I Lost Us', query: 'AccuseFive Where I Lost Us' },
+  { artist: 'Jackson Yee', song: '4% vol的河', query: 'Jackson Yee 4%vol的河' },
+  { artist: '郭顶', song: '凄美地', query: '郭顶 凄美地' },
 ];
 
 const favouriteGames = [
