@@ -1,52 +1,17 @@
-# potential-carnival
+# Xin Yee Lai | Portfolio
 
-A goldfish-themed personal portfolio website for Xin Yee.
+Hi, I'm Xin Yee Lai, a Computer Science student at Nanyang Technological University in Singapore. I use this site to share the projects and research I've worked on, what I'm learning, and a little of what I enjoy outside of tech.
 
-## Features
+My interests include AI and machine learning, computer vision, data science, and building useful software. The watercolour goldfish is a small nod to the theme I wanted for the site: personal, calm, and still focused on the work.
 
-✨ **Goldfish Theme** - Light blue and pastel orange color palette
-🎯 **Two-Column Layout** - Left navigation sidebar, right main content
-📱 **Responsive Design** - Works seamlessly on all devices
-🎵 **BGM Toggle** - Add your own background music
-📅 **Timeline Section** - Showcase your recent life updates
-🔗 **Multi-Page Navigation** - Home, About, Projects, Resume
+## Explore
 
-## Project Structure
+- **Home** introduces my current interests and selected work.
+- **Work** brings together my projects and hackathon entries, with results, images, and links where available.
+- **About** shares my journey, research, travel, music, reading, and board games.
+- **Resume** has my education, experience, research, projects, leadership, and skills.
 
-```
-app/
-├── styles/           # SCSS modules
-├── components/       # Reusable UI components
-├── content/          # MDX content (for future use)
-├── about/            # About page
-├── projects/         # Projects showcase page
-├── resume/           # Resume page
-├── layout.tsx        # Root layout
-└── page.tsx          # Home page
-
-public/
-├── images/           # Image placeholders
-│   ├── goldfish-placeholder.svg
-│   ├── hero-placeholder.svg
-│   ├── profile-placeholder.svg
-│   └── project-placeholder.svg
-└── audio/            # BGM files
-    └── bgm-placeholder.mp3 (to be added)
-```
-
-## Design Theme
-
-**Colors:**
-- Primary Blue: `#0088cc`
-- Pastel Orange: `#ff9f63`
-- Light Blue Background: `#e0f4ff`
-- Light Orange: `#ffc299`
-
-**Typography:**
-- Headings: Bold, Color Blue
-- Body: Regular, Color Gray-Blue
-
-## Quick Start
+## Run locally
 
 ### With Docker
 
@@ -63,42 +28,28 @@ npm install
 npm run dev
 ```
 
-## Customization Guide
+## Where things live
 
-### 1. Replace Images
+- Shared project and hackathon details: [app/content/portfolio.ts](app/content/portfolio.ts)
+- Home: [app/page.tsx](app/page.tsx)
+- About and life timeline: [app/about/page.tsx](app/about/page.tsx)
+- Work: [app/projects/page.tsx](app/projects/page.tsx)
+- Resume: [app/resume/page.tsx](app/resume/page.tsx)
+- Watercolour art and project previews: [public/images/](public/images/)
 
-- **Goldfish**: Replace [public/images/goldfish-placeholder.svg](public/images/goldfish-placeholder.svg) with your own image
-- Update the src path in [app/page.tsx](app/page.tsx)
+The project cards and resume share the same project data, so titles, dates, and outcomes stay consistent. The puzzle project appears on Work but is intentionally left off the resume.
 
-### 2. Add BGM
+## Built with
 
-- Place your audio file in [public/audio/](public/audio/)
-- Update the src in [app/page.tsx](app/page.tsx) to point to your audio file
-- Supported formats: MP3, WAV, OGG, M4A
+- Next.js 16
+- React and TypeScript
+- SCSS
+- Leaflet and React Leaflet for the travel map
 
-### 3. Update Timeline
-
-- Edit the `timelineEvents` array in [app/page.tsx](app/page.tsx)
-- Add your own life updates with dates and descriptions
-
-### 4. Customize Pages
-
-- **About**: Edit [app/about/page.tsx](app/about/page.tsx)
-- **Projects**: Edit [app/projects/page.tsx](app/projects/page.tsx)
-- **Resume**: Edit [app/resume/page.tsx](app/resume/page.tsx)
-
-## Tech Stack
-
-- Next.js 16.2
-- TypeScript 5.8
-- SCSS Modules
-- React Icons
-- Vercel deployment ready
-
-## Deploy to Vercel
+## Deploy
 
 ```bash
 vercel deploy
 ```
 
-Or connect your GitHub repo to Vercel for automatic deployments.
+You can also connect the repository to Vercel for automatic deployments.

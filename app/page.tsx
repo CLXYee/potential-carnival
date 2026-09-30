@@ -1,110 +1,95 @@
-'use client';
-
-import Link from 'next/link';
 import Image from 'next/image';
-
-const focusAreas = [
-  {
-    title: 'AI/ML Engineering',
-    description: 'Building and evaluating practical machine learning systems with PyTorch, Transformers, and computer vision.',
-  },
-  {
-    title: 'Data Science',
-    description: 'Turning complex data into useful insights through experimentation, modelling, evaluation, and clear communication.',
-  },
-  {
-    title: 'AI Research & R&D',
-    description: 'Exploring new methods, testing ideas carefully, and translating research into reliable prototypes and deployable systems.',
-  },
-];
+import Link from 'next/link';
+import SiteShell from './components/SiteShell';
+import WorkCard from './components/WorkCard';
+import MediaPlaceholder from './components/MediaPlaceholder';
+import { portfolioMedia, workEntries } from './content/portfolio';
 
 export default function HomePage() {
+  const featuredWork = workEntries[0];
+  const supportingWork = workEntries.slice(1, 3);
+
   return (
-    <div className="layout-container">
-      {/* Sidebar Navigation */}
-      <aside className="sidebar">
-        <nav className="sidebar-nav">
-          <h2 className="logo">🐠 Portfolio</h2>
-          <ul className="nav-links">
-            <li>
-              <Link href="/" className="nav-link active">Home</Link>
-            </li>
-            <li>
-              <Link href="/about" className="nav-link">About Me</Link>
-            </li>
-            <li>
-              <Link href="/projects" className="nav-link">Projects</Link>
-            </li>
-            <li>
-              <Link href="/resume" className="nav-link">Resume</Link>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
-      {/* Main Content */}
-      <main className="main-content">
-        <section className="hero-section">
-          <div className="hero-text">
-            <h1 className="greeting">Hi, I&apos;m Xin Yee</h1>
-            <p className="subgreeting">AI/ML enthusiast, researcher, and Computer Science student</p>
-            <p>I build intelligent systems and explore data-driven ideas across machine learning, data science, and software engineering.</p>
-            <div className="hero-actions">
-              <Link href="/projects" className="primary-action">View my work <span aria-hidden="true">↗</span></Link>
-              <Link href="/resume" className="secondary-action">Read my resume</Link>
-            </div>
+    <SiteShell activePage="home">
+      <section className="home-hero" aria-labelledby="home-title">
+        <div className="hero-copy">
+          <p className="eyebrow">Computer Science · AI/ML</p>
+          <h1 id="home-title">Xin Yee Lai</h1>
+          <p className="hero-role">Computer Science student at NTU</p>
+          <p className="hero-intro">I build and evaluate AI systems, from geospatial edge inference to applied machine-learning projects.</p>
+          <div className="hero-actions">
+            <Link href="/projects" className="button button--primary">Explore my work <span aria-hidden="true">↗</span></Link>
+            <Link href="/resume" className="button button--secondary">View resume</Link>
           </div>
+        </div>
+        <div className="hero-illustration">
+          <Image
+            src="/images/goldfish.png"
+            alt="Watercolour goldfish illustration"
+            width={390}
+            height={390}
+            priority
+          />
+        </div>
+      </section>
 
-          <div className="hero-media">
-            <Image
-              src="/images/goldfish-placeholder.svg"
-              alt="Watercolor goldfish illustration"
-              width={400}
-              height={400}
-              priority
-            />
-          </div>
-        </section>
+      <ul className="identity-line" aria-label="Identity">
+        <li>NTU</li>
+        <li>Computer Science</li>
+        <li>Singapore</li>
+      </ul>
 
-        <section className="career-strip" aria-label="Career snapshot">
+      <section className="home-section selected-work" aria-labelledby="selected-work-title">
+        <div className="section-heading-row">
           <div>
-            <span className="strip-label">Currently</span>
-            <strong>Final-year Computer Science student</strong>
+            <p className="eyebrow">Selected work</p>
+            <h2 id="selected-work-title">Research, models, and useful systems.</h2>
           </div>
-          <div>
-            <span className="strip-label">Interested in</span>
-            <strong>AI/ML · Data Science · Software Engineering</strong>
-          </div>
-          <div>
-            <span className="strip-label">Based in</span>
-            <strong>Singapore</strong>
-          </div>
-        </section>
+          <Link className="text-link" href="/projects">All work <span aria-hidden="true">↗</span></Link>
+        </div>
+        {featuredWork && <WorkCard work={featuredWork} featured />}
+        <div className="supporting-work-grid">
+          {supportingWork.map((work) => <WorkCard key={work.id} work={work} />)}
+        </div>
+      </section>
 
-        <section className="focus-section">
-          <div className="section-heading">
-            <span className="eyebrow">How I work</span>
-            <h2>Curious by nature, practical by design.</h2>
-          </div>
-          <div className="focus-grid">
-            {focusAreas.map((area) => (
-              <article key={area.title} className="focus-item">
-                <h3>{area.title}</h3>
-                <p>{area.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="contact-section">
+      <section className="home-section current-focus" aria-labelledby="current-focus-title">
+        <div className="section-heading-row">
           <div>
-            <span className="eyebrow">Let&apos;s connect</span>
-            <h2>Have an interesting problem to solve?</h2>
-            <p>I&apos;m open to full-time opportunities in AI/ML, data science, software engineering, and AI research or R&amp;D.</p>
+            <p className="eyebrow">Current focus</p>
+            <h2 id="current-focus-title">Research with a strong engineering foundation.</h2>
           </div>
-          <a className="contact-action" href="mailto:laixinyee04@gmail.com">Email Xin Yee <span aria-hidden="true">↗</span></a>
-        </section>
-      </main>
-    </div>
+        </div>
+        <div className="focus-list">
+          <p><strong>Applied AI/ML</strong><span>Building and evaluating machine-learning and computer-vision systems, from prototypes to deployment.</span></p>
+          <p><strong>Data and research</strong><span>Experimenting, comparing models, and communicating results clearly.</span></p>
+          <p><strong>Software and R&amp;D</strong><span>Interested in research that translates into reliable software and useful systems.</span></p>
+        </div>
+      </section>
+
+      <section className="home-section personal-preview" aria-labelledby="personal-title">
+        <MediaPlaceholder
+          label={portfolioMedia.portrait.label}
+          src={portfolioMedia.portrait.src}
+          tone="coral"
+          className="portrait-preview"
+        />
+        <div>
+          <p className="eyebrow">A little beyond the work</p>
+          <h2 id="personal-title">Curious about people, places, and ideas.</h2>
+          <p>Outside Computer Science, I enjoy learning languages, travelling, reading, and playing strategy board games.</p>
+          <Link className="text-link" href="/about">More about me <span aria-hidden="true">↗</span></Link>
+        </div>
+      </section>
+
+      <section className="contact-section" aria-labelledby="contact-title">
+        <div>
+          <p className="eyebrow">Contact</p>
+          <h2 id="contact-title">Let&apos;s make something useful.</h2>
+          <p>I&apos;m open to opportunities across AI/ML, data science, software engineering, and AI research or R&amp;D.</p>
+        </div>
+        <a className="button button--primary" href="mailto:laixinyee04@gmail.com">Email Xin Yee <span aria-hidden="true">↗</span></a>
+      </section>
+    </SiteShell>
   );
 }
